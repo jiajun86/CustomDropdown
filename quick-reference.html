@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Yan Jia Jun">
+    <meta name="description" content="A simple portfolio documenting my learning and passion for application design and development">
+    <title>Yan Jia Jun - jQuery UI Bootstrap Custom Dropdown</title>
+
+    <!-- Bootstrap -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <!-- App -->
+    <link rel="stylesheet" href="/CustomDropdown/assets/css/app.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button"
+                  class="btn btn-navbar"
+                  data-toggle="collapse"
+                  data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="index.html" class="brand">jQuery UI Bootstrap Custom Dropdown</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="get-started.html">Get started</a></li>
+              <li class="dropdown">
+                <a href="examples.html"
+                   class="dropdown-toggle"
+                   data-toggle="dropdown">Examples <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="examples.html#general">General</a></li>
+                  <li><a href="examples.html#single-column">Single Column</a></li>
+                  <li><a href="examples.html#single-row">Single Row</a></li>
+                </ul>
+              </li>
+              <li class="dropdown active">
+                <a href="quick-reference.html"
+                   class="dropdown-toggle"
+                   data-toggle="dropdown">Quick Reference <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="quick-reference.html#dropdown">Defining Dropdown</a></li>
+                  <li><a href="quick-reference.html#button">Customizing Buttons</a></li>
+                  <li><a href="quick-reference.html#pagination">Controlling Pagination</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="jumbotron subhead">
+      <div class="container">
+        <h1>Quick Reference</h1>
+        <p class="lead">All options to control and customize Custom Dropdown at a glance</p>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="span3 bs-docs-sidebar">
+          <ul class="nav nav-list bs-docs-sidenav affix-top">
+            <li><a href="#dropdown">
+                <i class="icon-chevron-right"></i> Defining Dropdown</a></li>
+            <li><a href="#button">
+                <i class="icon-chevron-right"></i> Customizing Buttons</a></li>
+            <li><a href="#pagination">
+                <i class="icon-chevron-right"></i> Controlling Pagination</a></li>
+          </ul>
+        </div>
+        <div class="span9">
+          <section id="dropdown">
+            <div class="page-header">
+              <h1>Defining Dropdown</h1>
+            </div>
+            <h3>Via JavaScript</h3>
+            <p>
+              Call a Custom Dropdown with id <code>myDropdown</code> with a
+              single line of JavaScript:
+            </p>
+            <pre class="prettyprint">$('#myDropdown').modal(options);</pre>
+            <h3>Options</h3>
+            <p>
+              Options can be passed via data attributes or JavaScript. For data
+              attributes, append the option name to <code>data-dropdown-</code>,
+              as in <code>data-dropdown-allowEmpty=""</code>. For JavaScript,
+              append the option name to <code>dropdown.</code> as in
+              <code>dropdown.allowEmpty=""</code>.
+            </p>
+            <table class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th style="width: 100px;">Name</th>
+                  <th style="width: 50px;">type</th>
+                  <th style="width: 50px;">default</th>
+                  <th>description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>allowEmpty</td>
+                  <td>boolean</td>
+                  <td>true</td>
+                  <td>Allow empty option to be selected</td>
+                </tr>
+                <tr>
+                  <td>autoClose</td>
+                  <td>boolean</td>
+                  <td>true</td>
+                  <td>Automatically closes the dialog box once any option selected</td>
+                </tr>
+                <tr>
+                  <td>capitalize</td>
+                  <td>boolean</td>
+                  <td>true</td>
+                  <td>Capitalizes display text for all options</td>
+                </tr>
+                <tr>
+                  <td>showDialogBox</td>
+                  <td>boolean</td>
+                  <td>true</td>
+                  <td>Uses dialog box for displaying options</td>
+                </tr>
+                <tr>
+                  <td>showPagination</td>
+                  <td>boolean</td>
+                  <td>true</td>
+                  <td>Shows pagination bar for page navigation</td>
+                </tr>
+                <tr>
+                  <td>showSearchBar</td>
+                  <td>boolean</td>
+                  <td>true</td>
+                  <td>Shows search bar for option filtering</td>
+                </tr>
+                <tr>
+                  <td>showSpacer</td>
+                  <td>boolean</td>
+                  <td>true</td>
+                  <td>Uses spacer to fill up empty spaces for consistency among all pages</td>
+                </tr>
+                <tr>
+                  <td>maxPerPage</td>
+                  <td>integer</td>
+                  <td>24</td>
+                  <td>Maximum number of options shown per page</td>
+                </tr>
+                <tr>
+                  <td>maxPerColumn</td>
+                  <td>integer</td>
+                  <td>12</td>
+                  <td>Maximum number of columns shown per page</td>
+                </tr>
+                <tr>
+                  <td>maxPerPagination</td>
+                  <td>integer</td>
+                  <td>10</td>
+                  <td>Maximum number of pages shown per pagination</td>
+                </tr>
+                <tr>
+                  <td>options</td>
+                  <td>string</td>
+                  <td>''</td>
+                  <td>
+                    JSON string representing an array of JavaScript objects to
+                    use as options for selection
+                  </td>
+                </tr>
+                <tr>
+                  <td>textKey</td>
+                  <td>string</td>
+                  <td>'text'</td>
+                  <td>JavaScript object property name to use as option text</td>
+                </tr>
+                <tr>
+                  <td>valueKey</td>
+                  <td>string</td>
+                  <td>'value'</td>
+                  <td>JavaScript object property name to use as option value</td>
+                </tr>
+                <tr>
+                  <td>sortBy</td>
+                  <td>string</td>
+                  <td>'text'</td>
+                  <td>JavaScript object property name for sorting the options</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section id="button">
+            <div class="page-header">
+              <h1>Customizing Buttons</h1>
+              <h3>Options</h3>
+              <p>
+                Options can be passed via data attributes or JavaScript. For data
+                attributes, append the option name to <code>data-button-</code>,
+                as in <code>data-button-rowClass=""</code>. For JavaScript,
+                append the option name to <code>button.</code> as in
+                <code>button.rowClass=""</code>.
+              </p>
+              <table class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th style="width: 100px;">Name</th>
+                    <th style="width: 50px;">type</th>
+                    <th style="width: 100px;">default</th>
+                    <th>description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>rowClass</td>
+                    <td>string</td>
+                    <td>'row'</td>
+                    <td>
+                      Uses <code>row</code> or <code>row-fluid</code> to change
+                      between fixed and fluid grid system
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>defaultClass</td>
+                    <td>string</td>
+                    <td>'btn btn-block'</td>
+                    <td>
+                      CSS class to use as default state of buttons. Accepts
+                      <a href="//getbootstrap.com/2.3.2/base-css.html#buttons" target="_blank">
+                        Bootstrap button styles and sizes
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>activeClass</td>
+                    <td>string</td>
+                    <td>'btn-info'</td>
+                    <td>
+                      CSS class to use as active state of buttons. Accepts
+                      <a href="//getbootstrap.com/2.3.2/base-css.html#buttons" target="_blank">
+                        Bootstrap button styles and sizes
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>inactiveClass</td>
+                    <td>string</td>
+                    <td>''</td>
+                    <td>
+                      CSS class to use as inactive state of buttons. Accepts
+                      <a href="//getbootstrap.com/2.3.2/base-css.html#buttons" target="_blank">
+                        Bootstrap button styles and sizes
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>defaultIconClass</td>
+                    <td>string</td>
+                    <td>''</td>
+                    <td>
+                      CSS class to use as default state of icons. Accepts
+                      <a href="//fortawesome.github.io/Font-Awesome/3.2.1/icons/" target="_blank">
+                        Font Awesome icons
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>activeIconClass</td>
+                    <td>string</td>
+                    <td>'icon-check'</td>
+                    <td>
+                      CSS class to use as active state of icons. Accepts
+                      <a href="//fortawesome.github.io/Font-Awesome/3.2.1/icons/" target="_blank">
+                        Font Awesome icons
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>inactiveIconClass</td>
+                    <td>string</td>
+                    <td>'icon-check-empty'</td>
+                    <td>
+                      CSS class to use as inactive state of icons. Accepts
+                      <a href="//fortawesome.github.io/Font-Awesome/3.2.1/icons/" target="_blank">
+                        Font Awesome icons
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>fadeOut</td>
+                    <td>integer</td>
+                    <td>300</td>
+                    <td>Defines the speed of buttons fading out when changing page</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section id="pagination">
+            <div class="page-header">
+              <h1>Controlling Pagination</h1>
+              <h3>Options</h3>
+              <p>
+                Options can be passed via data attributes or JavaScript. For data
+                attributes, append the option name to <code>data-pagination-</code>,
+                as in <code>data-pagination-wrapperClass=""</code>. For JavaScript,
+                append the option name to <code>pagination.</code> as in
+                <code>pagination.wrapperClass=""</code>.
+              </p>
+              <table class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th style="width: 100px;">Name</th>
+                    <th style="width: 50px;">type</th>
+                    <th style="width: 100px;">default</th>
+                    <th>description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>wrapperClass</td>
+                    <td>string</td>
+                    <td>'pagination'</td>
+                    <td>CSS class to use as wrapper for pagination. Accepts
+                      <a href="//getbootstrap.com/2.3.2/components.html#pagination" target="_blank">
+                        Bootstrap pagination styles, sizes and alignment
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>defaultClass</td>
+                    <td>string</td>
+                    <td>''</td>
+                    <td>
+                      CSS class to use as default state of pagination buttons. Accepts
+                      <a href="//getbootstrap.com/2.3.2/base-css.html#buttons" target="_blank">
+                        Bootstrap button styles
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>activeClass</td>
+                    <td>string</td>
+                    <td>'btn-info'</td>
+                    <td>
+                      CSS class to use as active state of pagination buttons. Accepts
+                      <a href="//getbootstrap.com/2.3.2/base-css.html#buttons" target="_blank">
+                        Bootstrap button styles
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>inactiveClass</td>
+                    <td>string</td>
+                    <td>''</td>
+                    <td>
+                      CSS class to use as inactive state of pagination buttons. Accepts
+                      <a href="//getbootstrap.com/2.3.2/base-css.html#buttons" target="_blank">
+                        Bootstrap button styles
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>disabledClass</td>
+                    <td>string</td>
+                    <td>'active'</td>
+                    <td>
+                      CSS class to use as disabled state of pagination buttons. Accepts
+                      <a href="//getbootstrap.com/2.3.2/base-css.html#buttons" target="_blank">
+                        Bootstrap button styles
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>previousClass</td>
+                    <td>string</td>
+                    <td>'icon-double-angle-left'</td>
+                    <td>
+                      CSS class to use as previous icon. Accepts
+                      <a href="//fortawesome.github.io/Font-Awesome/3.2.1/icons/" target="_blank">
+                        Font Awesome icons
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>nextClass</td>
+                    <td>string</td>
+                    <td>'icon-double-angle-right'</td>
+                    <td>
+                      CSS class to use as next icon. Accepts
+                      <a href="//fortawesome.github.io/Font-Awesome/3.2.1/icons/" target="_blank">
+                        Font Awesome icons
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>fadeOut</td>
+                    <td>integer</td>
+                    <td>0</td>
+                    <td>Defines the speed of pagination fading out when changing pagination page</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <ul class="footer-links">
+          <li><a href="//jiajun86.github.io/">Portfolio</a></li>
+          <li class="muted">·</li>
+          <li><a href="//github.com/jiajun86/CustomDropdown/issues">Issues</a></li>
+          <li class="muted">·</li>
+          <li><a href="//github.com/jiajun86/CustomDropdown/releases">Releases</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <!-- Underscore.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <!-- jQuery UI Bootstrap Dropdown -->
+    <script src="/CustomDropdown/scripts/jquery-ui-dropdown.js"></script>
+    <script>
+      setTimeout(function () {
+          $('.bs-docs-sidenav').affix({
+              offset: {
+                  top: function () {
+                      return $(window).width() <= 980 ? 290 : 210;
+                  },
+                  bottom: 270
+              }
+          });
+      }, 100);
+    </script>
+  </body>
+</html>

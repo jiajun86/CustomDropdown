@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Yan Jia Jun">
+    <meta name="description" content="A simple portfolio documenting my learning and passion for application design and development">
+    <title>Yan Jia Jun - jQuery UI Bootstrap Custom Dropdown</title>
+
+    <!-- Bootstrap -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <!-- App -->
+    <link rel="stylesheet" href="/CustomDropdown/assets/css/app.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button"
+                  class="btn btn-navbar"
+                  data-toggle="collapse"
+                  data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="index.html" class="brand">jQuery UI Bootstrap Custom Dropdown</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="get-started.html">Get started</a></li>
+              <li class="dropdown active">
+                <a href="examples.html"
+                   class="dropdown-toggle"
+                   data-toggle="dropdown">Examples <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="examples.html#general">General</a></li>
+                  <li><a href="examples.html#single-column">Single Column</a></li>
+                  <li><a href="examples.html#single-row">Single Row</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="quick-reference.html"
+                   class="dropdown-toggle"
+                   data-toggle="dropdown">Quick Reference <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="quick-reference.html#dropdown">Defining Dropdown</a></li>
+                  <li><a href="quick-reference.html#button">Customizing Buttons</a></li>
+                  <li><a href="quick-reference.html#pagination">Controlling Pagination</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="jumbotron subhead">
+      <div class="container">
+        <h1>Examples</h1>
+        <p class="lead">Lots of easy ways to use Custom Dropdown</p>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="span3 bs-docs-sidebar">
+          <ul class="nav nav-list bs-docs-sidenav affix-top">
+            <li><a href="#general">
+                <i class="icon-chevron-right"></i> General</a></li>
+            <li><a href="#single-column">
+                <i class="icon-chevron-right"></i> Single Column</a></li>
+            <li><a href="#single-row">
+                <i class="icon-chevron-right"></i> Single Row</a></li>
+          </ul>
+        </div>
+        <div class="span9">
+          <section id="general">
+            <div class="page-header">
+              <h1>General</h1>
+            </div>
+            <h3>Example</h3>
+            <p>
+              Dropdown as toggleable buttons.
+            </p>
+            <div class="bs-docs-example">
+              <select class="dropdown-example"
+                      data-dropdown-allowEmpty="false"
+                      data-dropdown-showDialogBox="false"
+                      data-dropdown-showPagination="false"
+                      data-dropdown-showSearchBar="false"
+                      data-dropdown-maxPerPage="6"
+                      data-dropdown-maxPerColumn="3"
+                      data-button-rowClass="row-fluid">
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+                <option value="5">Option 5</option>
+                <option value="6">Option 6</option>
+              </select>
+            </div>
+            <!-- -->
+<pre class="prettyprint">&lt;select class=&quot;dropdown-example&quot;
+        data-dropdown-allowEmpty=&quot;false&quot;
+        data-dropdown-showDialogBox=&quot;false&quot;
+        data-dropdown-showPagination=&quot;false&quot;
+        data-dropdown-showSearchBar=&quot;false&quot;
+        data-dropdown-maxPerPage=&quot;6&quot;
+        data-dropdown-maxPerColumn=&quot;3&quot;
+        data-button-rowClass=&quot;row-fluid&quot;&gt;
+  &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;
+  &lt;option value=&quot;2&quot;&gt;Option 2&lt;/option&gt;
+  &lt;option value=&quot;3&quot;&gt;Option 3&lt;/option&gt;
+  &lt;option value=&quot;4&quot;&gt;Option 4&lt;/option&gt;
+  &lt;option value=&quot;5&quot;&gt;Option 5&lt;/option&gt;
+  &lt;option value=&quot;6&quot;&gt;Option 6&lt;/option&gt;
+&lt;/select&gt;</pre>
+            <!-- -->
+            <h3>Button Size</h3>
+            <p>
+              Three different sizes available via Bootstrap, namely default,
+              <code>btn-mini</code> and <code>btn-large</code>.
+            </p>
+            <div class="bs-docs-example">
+              <select class="dropdown-example"
+                      data-dropdown-allowEmpty="false"
+                      data-dropdown-showDialogBox="false"
+                      data-dropdown-showPagination="false"
+                      data-dropdown-showSearchBar="false"
+                      data-dropdown-maxPerPage="6"
+                      data-dropdown-maxPerColumn="3"
+                      data-button-rowClass="row-fluid"
+                      data-button-defaultClass="btn btn-mini">
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+                <option value="5">Option 5</option>
+                <option value="6">Option 6</option>
+              </select>
+            </div>
+            <!-- -->
+<pre class="prettyprint">&lt;select class=&quot;dropdown-example&quot;
+        data-dropdown-allowEmpty=&quot;false&quot;
+        data-dropdown-showDialogBox=&quot;false&quot;
+        data-dropdown-showPagination=&quot;false&quot;
+        data-dropdown-showSearchBar=&quot;false&quot;
+        data-dropdown-maxPerPage=&quot;6&quot;
+        data-dropdown-maxPerColumn=&quot;3&quot;
+        data-button-rowClass=&quot;row-fluid&quot;
+        data-button-defaultClass=&quot;btn btn-mini&quot;&gt;
+  &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;
+  &lt;option value=&quot;2&quot;&gt;Option 2&lt;/option&gt;
+  &lt;option value=&quot;3&quot;&gt;Option 3&lt;/option&gt;
+  &lt;option value=&quot;4&quot;&gt;Option 4&lt;/option&gt;
+  &lt;option value=&quot;5&quot;&gt;Option 5&lt;/option&gt;
+  &lt;option value=&quot;6&quot;&gt;Option 6&lt;/option&gt;
+&lt;/select&gt;</pre>
+            <!-- -->
+            <div class="bs-docs-example">
+              <select class="dropdown-example"
+                      data-dropdown-allowEmpty="false"
+                      data-dropdown-showDialogBox="false"
+                      data-dropdown-showPagination="false"
+                      data-dropdown-showSearchBar="false"
+                      data-dropdown-maxPerPage="6"
+                      data-dropdown-maxPerColumn="3"
+                      data-button-rowClass="row-fluid"
+                      data-button-defaultClass="btn btn-large">
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+                <option value="5">Option 5</option>
+                <option value="6">Option 6</option>
+              </select>
+            </div>
+            <!-- -->
+<pre class="prettyprint">&lt;select class=&quot;dropdown-example&quot;
+        data-dropdown-allowEmpty=&quot;false&quot;
+        data-dropdown-showDialogBox=&quot;false&quot;
+        data-dropdown-showPagination=&quot;false&quot;
+        data-dropdown-showSearchBar=&quot;false&quot;
+        data-dropdown-maxPerPage=&quot;6&quot;
+        data-dropdown-maxPerColumn=&quot;3&quot;
+        data-button-rowClass=&quot;row-fluid&quot;
+        data-button-defaultClass=&quot;btn btn-large&quot;&gt;
+  &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;
+  &lt;option value=&quot;2&quot;&gt;Option 2&lt;/option&gt;
+  &lt;option value=&quot;3&quot;&gt;Option 3&lt;/option&gt;
+  &lt;option value=&quot;4&quot;&gt;Option 4&lt;/option&gt;
+  &lt;option value=&quot;5&quot;&gt;Option 5&lt;/option&gt;
+  &lt;option value=&quot;6&quot;&gt;Option 6&lt;/option&gt;
+&lt;/select&gt;</pre>
+            <!-- -->
+            <h3>Dialog Box</h3>
+            <p>
+              Enable dialog box to display toggleable buttons separately in a
+              dialog box.
+            </p>
+            <div class="bs-docs-example">
+              <select class="dropdown-example"
+                      data-dropdown-allowEmpty="false"
+                      data-dropdown-showDialogBox="true"
+                      data-dropdown-showPagination="false"
+                      data-dropdown-showSearchBar="false"
+                      data-dropdown-maxPerPage="6"
+                      data-dropdown-maxPerColumn="3"
+                      data-button-rowClass="row-fluid">
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+                <option value="5">Option 5</option>
+                <option value="6">Option 6</option>
+              </select>
+            </div>
+            <!-- -->
+<pre class="prettyprint">&lt;select class=&quot;dropdown-example&quot;
+        data-dropdown-allowEmpty=&quot;false&quot;
+        data-dropdown-showDialogBox=&quot;true&quot;
+        data-dropdown-showPagination=&quot;false&quot;
+        data-dropdown-showSearchBar=&quot;false&quot;
+        data-dropdown-maxPerPage=&quot;6&quot;
+        data-dropdown-maxPerColumn=&quot;3&quot;
+        data-button-rowClass=&quot;row-fluid&quot;&gt;
+  &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;
+  &lt;option value=&quot;2&quot;&gt;Option 2&lt;/option&gt;
+  &lt;option value=&quot;3&quot;&gt;Option 3&lt;/option&gt;
+  &lt;option value=&quot;4&quot;&gt;Option 4&lt;/option&gt;
+  &lt;option value=&quot;5&quot;&gt;Option 5&lt;/option&gt;
+  &lt;option value=&quot;6&quot;&gt;Option 6&lt;/option&gt;
+&lt;/select&gt;</pre>
+            <!-- -->
+            <h3>Pagination</h3>
+            <p>
+              Enable pagination if total number of options exceed the number of
+              buttons supported per page.
+            </p>
+            <div class="bs-docs-example">
+              <select class="dropdown-example"
+                      data-dropdown-allowEmpty="false"
+                      data-dropdown-showDialogBox="false"
+                      data-dropdown-showPagination="true"
+                      data-dropdown-showSearchBar="false"
+                      data-dropdown-maxPerPage="3"
+                      data-dropdown-maxPerColumn="1"
+                      data-button-rowClass="row-fluid">
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+                <option value="5">Option 5</option>
+                <option value="6">Option 6</option>
+                <option value="7">Option 7</option>
+                <option value="8">Option 8</option>
+                <option value="9">Option 9</option>
+              </select>
+            </div>
+            <!-- -->
+<pre class="prettyprint">&lt;select class=&quot;dropdown-example&quot;
+        data-dropdown-allowEmpty=&quot;false&quot;
+        data-dropdown-showDialogBox=&quot;false&quot;
+        data-dropdown-showPagination=&quot;true&quot;
+        data-dropdown-showSearchBar=&quot;false&quot;
+        data-dropdown-maxPerPage=&quot;3&quot;
+        data-dropdown-maxPerColumn=&quot;1&quot;
+        data-button-rowClass=&quot;row-fluid&quot;&gt;
+  &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;
+  &lt;option value=&quot;2&quot;&gt;Option 2&lt;/option&gt;
+  &lt;option value=&quot;3&quot;&gt;Option 3&lt;/option&gt;
+  &lt;option value=&quot;4&quot;&gt;Option 4&lt;/option&gt;
+  &lt;option value=&quot;5&quot;&gt;Option 5&lt;/option&gt;
+  &lt;option value=&quot;6&quot;&gt;Option 6&lt;/option&gt;
+  &lt;option value=&quot;7&quot;&gt;Option 7&lt;/option&gt;
+  &lt;option value=&quot;8&quot;&gt;Option 8&lt;/option&gt;
+  &lt;option value=&quot;9&quot;&gt;Option 9&lt;/option&gt;
+&lt;/select&gt;</pre>
+            <!-- -->
+            <h3>Search Bar</h3>
+            <p>
+              Allows users to search for the desired option quickly.
+            </p>
+            <div class="bs-docs-example">
+              <select class="dropdown-example"
+                      data-dropdown-allowEmpty="false"
+                      data-dropdown-showDialogBox="false"
+                      data-dropdown-showPagination="true"
+                      data-dropdown-showSearchBar="true"
+                      data-dropdown-maxPerPage="3"
+                      data-dropdown-maxPerColumn="1"
+                      data-button-rowClass="row-fluid">
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+                <option value="5">Option 5</option>
+                <option value="6">Option 6</option>
+                <option value="7">Option 7</option>
+                <option value="8">Option 8</option>
+                <option value="9">Option 9</option>
+              </select>
+            </div>
+            <!-- -->
+<pre class="prettyprint">&lt;select class=&quot;dropdown-example&quot;
+        data-dropdown-allowEmpty=&quot;false&quot;
+        data-dropdown-showDialogBox=&quot;false&quot;
+        data-dropdown-showPagination=&quot;true&quot;
+        data-dropdown-showSearchBar=&quot;true&quot;
+        data-dropdown-maxPerPage=&quot;3&quot;
+        data-dropdown-maxPerColumn=&quot;1&quot;
+        data-button-rowClass=&quot;row-fluid&quot;&gt;
+  &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;
+  &lt;option value=&quot;2&quot;&gt;Option 2&lt;/option&gt;
+  &lt;option value=&quot;3&quot;&gt;Option 3&lt;/option&gt;
+  &lt;option value=&quot;4&quot;&gt;Option 4&lt;/option&gt;
+  &lt;option value=&quot;5&quot;&gt;Option 5&lt;/option&gt;
+  &lt;option value=&quot;6&quot;&gt;Option 6&lt;/option&gt;
+  &lt;option value=&quot;7&quot;&gt;Option 7&lt;/option&gt;
+  &lt;option value=&quot;8&quot;&gt;Option 8&lt;/option&gt;
+  &lt;option value=&quot;9&quot;&gt;Option 9&lt;/option&gt;
+&lt;/select&gt;</pre>
+            <!-- -->
+          </section>
+          <section id="single-column">
+            <div class="page-header">
+              <h1>Single Column</h1>
+            </div>
+            <h3>Example</h3>
+            <p>
+              Dropdown as a single column of toggleable buttons by setting
+              <code>data-dropdown-maxPerColumn="1"</code>. Supports up to
+              maximum of 24 buttons. Enable pagination bar if more than 24
+              buttons by setting <code>data-dropdown-showPagination="true"</code>.
+            </p>
+            <div class="bs-docs-example">
+              <select class="dropdown-example"
+                      data-dropdown-allowEmpty="false"
+                      data-dropdown-showDialogBox="false"
+                      data-dropdown-showPagination="false"
+                      data-dropdown-showSearchBar="false"
+                      data-dropdown-maxPerColumn="1"
+                      data-button-rowClass="row-fluid">
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+            </div>
+            <!-- -->
+<pre class="prettyprint">&lt;select class=&quot;dropdown-example&quot;
+        data-dropdown-allowEmpty=&quot;false&quot;
+        data-dropdown-showDialogBox=&quot;false&quot;
+        data-dropdown-showPagination=&quot;false&quot;
+        data-dropdown-showSearchBar=&quot;false&quot;
+        data-dropdown-maxPerColumn=&quot;1&quot;
+        data-button-rowClass=&quot;row-fluid&quot;&gt;
+  &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;
+  &lt;option value=&quot;2&quot;&gt;Option 2&lt;/option&gt;
+  &lt;option value=&quot;3&quot;&gt;Option 3&lt;/option&gt;
+&lt;/select&gt;</pre>
+            <!-- -->
+            <h3>Button Width</h3>
+            <p>Control button width by wrapping it in a <code>&lt;div&gt;</code></p>
+            <div class="bs-docs-example">
+              <div style="width: 200px">
+                <select class="dropdown-example"
+                        data-dropdown-allowEmpty="false"
+                        data-dropdown-showDialogBox="false"
+                        data-dropdown-showPagination="false"
+                        data-dropdown-showSearchBar="false"
+                        data-dropdown-maxPerColumn="1"
+                        data-button-rowClass="row-fluid">
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+              </div>
+            </div>
+            <!-- -->
+<pre class="prettyprint">&lt;div style=&quot;width: 200px&quot;&gt;
+  &lt;select class=&quot;dropdown-example&quot;
+          data-dropdown-allowEmpty=&quot;false&quot;
+          data-dropdown-showDialogBox=&quot;false&quot;
+          data-dropdown-showPagination=&quot;false&quot;
+          data-dropdown-showSearchBar=&quot;false&quot;
+          data-dropdown-maxPerColumn=&quot;1&quot;
+          data-button-rowClass=&quot;row-fluid&quot;&gt;
+    &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;
+    &lt;option value=&quot;2&quot;&gt;Option 2&lt;/option&gt;
+    &lt;option value=&quot;3&quot;&gt;Option 3&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;</pre>
+            <!-- -->
+          </section>
+          <section id="single-row">
+            <div class="page-header">
+              <h1>Single Row</h1>
+            </div>
+            <h3>Example</h3>
+            <p>
+              Dropdown as a single row of toggleable buttons by setting
+              <code>data-dropdown-maxPerPage</code> the same as
+              <code>data-dropdown-maxPerColumn</code>. Supports up to maximum
+              of 12 buttons. Enable pagination bar if more than 12 buttons by
+              setting <code>data-dropdown-showPagination="true"</code>.
+            </p>
+            <div class="bs-docs-example">
+              <select class="dropdown-example"
+                      data-dropdown-allowEmpty="false"
+                      data-dropdown-showDialogBox="false"
+                      data-dropdown-showPagination="false"
+                      data-dropdown-showSearchBar="false"
+                      data-dropdown-maxPerPage="3"
+                      data-dropdown-maxPerColumn="3"
+                      data-button-rowClass="row-fluid">
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+            </div>
+            <!-- -->
+<pre class="prettyprint">&lt;select class=&quot;dropdown-example&quot;
+        data-dropdown-allowEmpty=&quot;false&quot;
+        data-dropdown-showDialogBox=&quot;false&quot;
+        data-dropdown-showPagination=&quot;false&quot;
+        data-dropdown-showSearchBar=&quot;false&quot;
+        data-dropdown-maxPerPage=&quot;3&quot;
+        data-dropdown-maxPerColumn=&quot;3&quot;
+        data-button-rowClass=&quot;row-fluid&quot;&gt;
+  &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;
+  &lt;option value=&quot;2&quot;&gt;Option 2&lt;/option&gt;
+  &lt;option value=&quot;3&quot;&gt;Option 3&lt;/option&gt;
+&lt;/select&gt;</pre>
+            <!-- -->
+          </section>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <ul class="footer-links">
+          <li><a href="//jiajun86.github.io/">Portfolio</a></li>
+          <li class="muted">·</li>
+          <li><a href="//github.com/jiajun86/CustomDropdown/issues">Issues</a></li>
+          <li class="muted">·</li>
+          <li><a href="//github.com/jiajun86/CustomDropdown/releases">Releases</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <!-- Underscore.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <!-- jQuery UI Bootstrap Dropdown -->
+    <script src="/CustomDropdown/scripts/jquery-ui-dropdown.js"></script>
+    <script>
+      setTimeout(function () {
+          $('.bs-docs-sidenav').affix({
+              offset: {
+                  top: function () {
+                      return $(window).width() <= 980 ? 290 : 210;
+                  },
+                  bottom: 270
+              }
+          });
+      }, 100);
+      $('select.dropdown-example').dropdown();
+    </script>
+  </body>
+</html>

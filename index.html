@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Yan Jia Jun">
+    <meta name="description" content="A simple portfolio documenting my learning and passion for application design and development">
+    <title>Yan Jia Jun - jQuery UI Bootstrap Custom Dropdown</title>
+
+    <!-- Bootstrap -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <!-- App -->
+    <link rel="stylesheet" href="/CustomDropdown/assets/css/app.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button"
+                  class="btn btn-navbar"
+                  data-toggle="collapse"
+                  data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="index.html" class="brand">jQuery UI Bootstrap Custom Dropdown</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="index.html">Home</a></li>
+              <li><a href="get-started.html">Get started</a></li>
+              <li class="dropdown">
+                <a href="examples.html"
+                   class="dropdown-toggle"
+                   data-toggle="dropdown">Examples <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="examples.html#general">General</a></li>
+                  <li><a href="examples.html#single-column">Single Column</a></li>
+                  <li><a href="examples.html#single-row">Single Row</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="quick-reference.html"
+                   class="dropdown-toggle"
+                   data-toggle="dropdown">Quick Reference <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="quick-reference.html#dropdown">Defining Dropdown</a></li>
+                  <li><a href="quick-reference.html#button">Customizing Buttons</a></li>
+                  <li><a href="quick-reference.html#pagination">Controlling Pagination</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="jumbotron masthead">
+      <div class="container">
+        <h1>jQuery UI Bootstrap</h1>
+        <p>
+          Custom Dropdown using jQuery UI widget factory, Bootstrap 2.3.2 styles
+          and Font Awesome 3.2.1 icons
+        </p>
+        <p><a href="get-started.html" class="btn btn-primary btn-large">Get Started</a></p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="marketing">
+        <h1>Introducing Custom Dropdown</h1>
+        <p class="marketing-byline">Need fancier dropdown? Look no further.</p>
+        <div class="row-fluid">
+          <div class="span4">
+            <h2>Powered by jQuery UI</h2>
+            <p>
+              Uses jQuery UI widget factory for state management, consistent API,
+              setting options on initialization and extensibility.
+            </p>
+          </div>
+          <div class="span4">
+            <h2>Built with Bootstrap</h2>
+            <p>
+              Uses Bootstrap to not only look and behave great in the latest
+              desktop browsers, but in tablet and smartphone browsers as well.
+            </p>
+          </div>
+          <div class="span4">
+            <h2>Highly customizable</h2>
+            <p>
+              A dozens of options made available to control the look and feel,
+              either using Bootstrap and Font Awesome or your own custom styles.
+            </p>
+          </div>
+        </div>
+        <hr class="soften">
+        <h1>Quick Demo</h1>
+        <p class="marketing-byline">
+          For more information, visit <a href="get-started.html">get started</a>
+          or browse the <a href="examples.html#general">examples</a>.
+        </p>
+        <div class="row-fluid">
+          <div class="span4">&nbsp;</div>
+          <div class="span4">
+            <form>
+              <fieldset>
+                <label for="demo">Favourite programming language</label>
+                <select id="demo"
+                        data-dropdown-allowEmpty="false"
+                        data-dropdown-autoClose="true"
+                        data-dropdown-capitalize="true"
+                        data-dropdown-showDialogBox="true"
+                        data-dropdown-showPagination="true"
+                        data-dropdown-showSearchBar="true"
+                        data-dropdown-showSpacer="true"
+                        data-dropdown-maxPerPage="24"
+                        data-dropdown-maxPerColumn="4"
+                        data-dropdown-maxPerPagination="10"
+                        data-dropdown-options='[{"text":"C / C++","value":1},{"text":"Groovy","value":2},{"text":"Java","value":3},{"text":"JavaScript","value":4},{"text":"Objective-C","value":5},{"text":"Perl","value":6},{"text":"Python","value":7},{"text":"Ruby","value":8}]'
+                        data-dropdown-textKey="text"
+                        data-dropdown-valueKey="value"
+                        data-dropdown-sortBy="text"
+                        data-button-rowClass="row-fluid"
+                        data-button-defaultClass="btn btn-block"
+                        data-button-activeClass="btn-info"
+                        data-button-inactiveClass=""
+                        data-button-defaultIconClass=""
+                        data-button-activeIconClass="icon-check"
+                        data-button-inactiveIconClass="icon-check-empty"
+                        data-button-fadeOut="300"
+                        data-pagination-wrapperClass="pagination"
+                        data-pagination-defaultClass=""
+                        data-pagination-activeClass="btn-info"
+                        data-pagination-inactiveClass=""
+                        data-pagination-disabledClass="active"
+                        data-pagination-previousClass="icon-double-angle-left"
+                        data-pagination-nextClass="icon-double-angle-right"
+                        data-pagination-fadeOut="0">
+                </select>
+              </fieldset>
+            </form>
+          </div>
+          <div class="span4">&nbsp;</div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p>
+          Based on <a href="//getbootstrap.com/2.3.2/" target="_blank">Bootstrap 2.3.2</a>
+          web pages by <a href="//twitter.com/mdo" target="_blank">@mdo</a> and
+          <a href="//twitter.com/fat" target="_blank">@fat</a>
+        </p>
+        <ul class="footer-links">
+          <li><a href="//jiajun86.github.io/">Portfolio</a></li>
+          <li class="muted">·</li>
+          <li><a href="//github.com/jiajun86/CustomDropdown/issues">Issues</a></li>
+          <li class="muted">·</li>
+          <li><a href="//github.com/jiajun86/CustomDropdown/releases">Releases</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <!-- Underscore.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <!-- jQuery UI Bootstrap Dropdown -->
+    <script src="/CustomDropdown/scripts/jquery-ui-dropdown.js"></script>
+    <script>$('#demo').dropdown();</script>
+  </body>
+</html>

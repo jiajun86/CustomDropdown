@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Yan Jia Jun">
+    <meta name="description" content="A simple portfolio documenting my learning and passion for application design and development">
+    <title>Yan Jia Jun - jQuery UI Bootstrap Custom Dropdown</title>
+
+    <!-- Bootstrap -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <!-- App -->
+    <link rel="stylesheet" href="/CustomDropdown/assets/css/app.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button"
+                  class="btn btn-navbar"
+                  data-toggle="collapse"
+                  data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="index.html" class="brand">jQuery UI Bootstrap Custom Dropdown</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li class="active"><a href="get-started.html">Get started</a></li>
+              <li class="dropdown">
+                <a href="examples.html"
+                   class="dropdown-toggle"
+                   data-toggle="dropdown">Examples <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="examples.html#general">General</a></li>
+                  <li><a href="examples.html#single-column">Single Column</a></li>
+                  <li><a href="examples.html#single0-row">Single Row</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="quick-reference.html"
+                   class="dropdown-toggle"
+                   data-toggle="dropdown">Quick Reference <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="quick-reference.html#dropdown">Defining Dropdown</a></li>
+                  <li><a href="quick-reference.html#button">Customizing Buttons</a></li>
+                  <li><a href="quick-reference.html#pagination">Controlling Pagination</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="jumbotron subhead">
+      <div class="container">
+        <h1>Getting started</h1>
+        <p class="lead">How to get started with a simple template</p>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="span3 bs-docs-sidebar">
+          <ul class="nav nav-list bs-docs-sidenav">
+            <li><a href="#download-bootstrap"><i class="icon-chevron-right"></i> Download</a></li>
+            <li><a href="#html-template"><i class="icon-chevron-right"></i> HTML template</a></li>
+            <li><a href="#examples"><i class="icon-chevron-right"></i> Examples</a></li>
+            <li><a href="#what-next"><i class="icon-chevron-right"></i> What next?</a></li>
+          </ul>
+        </div>
+        <div class="span9">
+          <section id="download-bootstrap">
+            <div class="page-header">
+              <h1>1. Download</h1>
+            </div>
+            <div class="row-fluid">
+              <div class="span6">
+                <h2>Source only</h2>
+                <p>
+                  <strong>Fastest way to get started:</strong> get the source
+                  file and utilize the HTML template.
+                </p>
+                <p>
+                  <a href="//github.com/jiajun86/CustomDropdown/archive/1.0.0.zip"
+                     class="btn btn-large btn-primary">Download Custom Dropdown</a>
+                </p>
+              </div>
+              <div class="span6">
+                <h2>Source and dependencies</h2>
+                <p>Get the source file and its corresponding dependencies.</p>
+                <p>
+                  <a href="//github.com/jiajun86/CustomDropdown/archive/1.0.0-dependencies.zip"
+                     class="btn btn-large">Download source and dependencies</a>
+                </p>
+              </div>
+            </div>
+          </section>
+          <section id="html-template">
+            <div class="page-header">
+              <h1>2. HTML template</h1>
+            </div>
+            <p class="lead">
+              Utilize a basic HTML template that includes everything required,
+              you can begin to use Custom Dropdown in any site or application.
+            </p>
+            <!-- -->
+<pre class="prettyprint">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;title&gt;Get Started - HTML template&lt;/title&gt;
+
+    &lt;!-- Bootstrap --&gt;
+    &lt;link href=&quot;//maxcdn.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;!-- Font Awesome --&gt;
+    &lt;link href=&quot;//maxcdn.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --&gt;
+    &lt;!-- WARNING: Respond.js doesn't work if you view the page via file:// --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script src=&quot;https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js&quot;&gt;&lt;/script&gt;
+      &lt;script src=&quot;https://oss.maxcdn.com/respond/1.4.2/respond.min.js&quot;&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Get Started - HTML template&lt;/h1&gt;
+
+    &lt;!-- jQuery --&gt;
+    &lt;script src=&quot;//code.jquery.com/jquery-1.11.2.min.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- jQuery UI --&gt;
+    &lt;script src=&quot;//code.jquery.com/ui/1.11.4/jquery-ui.min.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- Bootstrap --&gt;
+    &lt;script src=&quot;//maxcdn.bootstrapcdn.com/bootstrap/2.3.2/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- Underscore.js --&gt;
+    &lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- jQuery UI Bootstrap Dropdown --&gt;
+    &lt;script src=&quot;/scripts/jquery-ui-dropdown.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+            <!-- -->
+          </section>
+          <section id="examples">
+            <div class="page-header">
+              <h1>3. Examples</h1>
+            </div>
+            <p class="lead">
+              Check out the <a href="examples.html">basic examples</a>
+              for some ideas to use Custom Dropdown.
+            </p>
+          </section>
+          <section id="what-next">
+            <div class="page-header">
+              <h1>What next?</h1>
+            </div>
+            <p class="lead">
+              Head to the <a href="quick-reference.html">quick reference</a>
+              for more information to control and customize Custom Dropdown to
+              suite your very need.
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <ul class="footer-links">
+          <li><a href="//jiajun86.github.io/">Portfolio</a></li>
+          <li class="muted">·</li>
+          <li><a href="//github.com/jiajun86/CustomDropdown/issues">Issues</a></li>
+          <li class="muted">·</li>
+          <li><a href="//github.com/jiajun86/CustomDropdown/releases">Releases</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <!-- Underscore.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <!-- jQuery UI Bootstrap Dropdown -->
+    <script src="/CustomDropdown/scripts/jquery-ui-dropdown.js"></script>
+    <script>
+      setTimeout(function () {
+          $('.bs-docs-sidenav').affix({
+              offset: {
+                  top: function () {
+                      return $(window).width() <= 980 ? 290 : 210;
+                  },
+                  bottom: 270
+              }
+          });
+      }, 100);
+    </script>
+  </body>
+</html>
